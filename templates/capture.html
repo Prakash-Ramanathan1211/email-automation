@@ -1,96 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="login-root">
-        <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
-          <div class="loginbackground box-background--white padding-top--64">
-            <div class="loginbackground-gridContainer">
-              <div class="box-root flex-flex" style="grid-area: top / start / 8 / end;">
-                <div class="box-root" style="background-image: linear-gradient(white 0%, rgb(247, 250, 252) 33%); flex-grow: 1;">
-                </div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5;">
-                <div class="box-root box-divider--light-all-2 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 6 / start / auto / 2;">
-                <div class="box-root box-background--blue800" style="flex-grow: 1;"></div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 7 / start / auto / 4;">
-                <div class="box-root box-background--blue animationLeftRight" style="flex-grow: 1;"></div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6;">
-                <div class="box-root box-background--gray100 animationLeftRight tans3s" style="flex-grow: 1;"></div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 2 / 15 / auto / end;">
-                <div class="box-root box-background--cyan200 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 3 / 14 / auto / end;">
-                <div class="box-root box-background--blue animationRightLeft" style="flex-grow: 1;"></div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 4 / 17 / auto / 20;">
-                <div class="box-root box-background--gray100 animationRightLeft tans4s" style="flex-grow: 1;"></div>
-              </div>
-              <div class="box-root flex-flex" style="grid-area: 5 / 14 / auto / 17;">
-                <div class="box-root box-divider--light-all-2 animationRightLeft tans3s" style="flex-grow: 1;"></div>
-              </div>
+      <div
+        class="box-root flex-flex flex-direction--column"
+        style="min-height: 100vh; flex-grow: 1"
+      >
+        <div class="loginbackground box-background--white padding-top--64">
+          <div class="loginbackground-gridContainer">
+            <div
+              class="box-root flex-flex"
+              style="grid-area: top / start / 8 / end"
+            >
+              <div
+                class="box-root"
+                style="
+                  background-image: linear-gradient(
+                    white 0%,
+                    rgb(247, 250, 252) 33%
+                  );
+                  flex-grow: 1;
+                "
+              ></div>
             </div>
-          </div>
-          <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
-            <div class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center">
-                <br><br><br>
-              <h1><a href="http://blog.stackfindover.com/" rel="dofollow">Email Attachment Automation</a></h1><br><br>
+            <div class="box-root flex-flex" style="grid-area: 4 / 2 / auto / 5">
+              <div
+                class="box-root box-divider--light-all-2 animationLeftRight tans3s"
+                style="flex-grow: 1"
+              ></div>
             </div>
-            <div class="formbg-outer" style="width: 70%;">
-              <img src="{{ url_for('video_feed') }}" height="80%">
-              <form method="post" action="/requests">
-                <input type="hidden" name="t_email" value="{{t_email}}" />
-                <input type="hidden" name="name" value="{{name}}" />
-                <!-- <input type="submit" value="Stop/Start" name="stop" /> -->
-                <input type="submit" value="Capture" name="click"/>
-                {{t_email}}
-                {{name}}
-                
-                <!-- <input type="submit" value="Grey" name="grey" />
-                <input type="submit" value="Negative" name="neg" />
-                <input type="submit" value="Face Only" name="face" />
-                <input type="submit" value="Start/Stop Recording" name="rec" /> -->
-                </form>
-                
-              <!-- <div class="formbg">
-                <div class="formbg-inner padding-horizontal--48">
-                    
-                  <span class="padding-bottom--15">Enter the email id to send attachment</span><br>
-                  <form id="stripe-login" action = "/requests" methods = "POST">
-                    <div class="field padding-bottom--24">
-                      <label for="name">Name</label>
-                      <input type="text" name="name">
-                    </div>
-                    <div class="field padding-bottom--24">
-                      <div class="grid--50-50">
-                        <label for="To">To</label>
-                      </div>
-                      <input type="email" name="t_email">
-                    </div>
-
-                    
-                    <div class="field padding-bottom--24">
-                      <input type="submit" name="submit" value="Continue">
-                    </div>
-                  
-                  </form>
-                </div>
-              </div> -->
-              
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 6 / start / auto / 2"
+            >
+              <div
+                class="box-root box-background--blue800"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 7 / start / auto / 4"
+            >
+              <div
+                class="box-root box-background--blue animationLeftRight"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div class="box-root flex-flex" style="grid-area: 8 / 4 / auto / 6">
+              <div
+                class="box-root box-background--gray100 animationLeftRight tans3s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 2 / 15 / auto / end"
+            >
+              <div
+                class="box-root box-background--cyan200 animationRightLeft tans4s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 3 / 14 / auto / end"
+            >
+              <div
+                class="box-root box-background--blue animationRightLeft"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 4 / 17 / auto / 20"
+            >
+              <div
+                class="box-root box-background--gray100 animationRightLeft tans4s"
+                style="flex-grow: 1"
+              ></div>
+            </div>
+            <div
+              class="box-root flex-flex"
+              style="grid-area: 5 / 14 / auto / 17"
+            >
+              <div
+                class="box-root box-divider--light-all-2 animationRightLeft tans3s"
+                style="flex-grow: 1"
+              ></div>
             </div>
           </div>
         </div>
+        <div
+          class="box-root padding-top--18 flex-flex flex-direction--column"
+          style="flex-grow: 1; z-index: 9"
+        >
+          <div
+            class="box-root padding-top--48 padding-bottom--24 flex-flex flex-justifyContent--center"
+          >
+            <br /><br /><br />
+            <h1>
+              <a href="http://blog.stackfindover.com/" rel="dofollow"
+                >Email Attachment Automation</a
+              >
+            </h1>
+            <br /><br />
+          </div>
+          <div
+            class="formbg-outer"
+            style="
+              width: 100%;
+              display: flex;
+              justify-content: space-around;
+              align-items: flex-start;
+              height: fit-content;
+            "
+          >
+            <div
+            class="cam-div"
+              style="
+                flex: 2;
+                width: 60%;
+                display: flex;
+                justify-content: flex-end;
+              "
+            >
+              <img src="{{ url_for('video_feed') }}" height="80%" />
+            </div>
+            <div class="timer-div" style="width: 40%;display: flex ;flex: 1;text-align: center;align-items: center;height: 100%;justify-content: center;" class=".body">
+                <h1 id="timer">7</h1>
+                <script type="text/javascript">
+                  setInterval(()=>{
+                      let t=document.querySelector('#timer');
+                      let time=parseInt(t.innerHTML);
+                      if(time>0){
+                          t.innerHTML=time-1;
+                      }
+                  },1000)
+                </script>
+            </div>
+          </div>
+          <form method="post" action="/requests">
+            <input type="hidden" name="t_email" value="{{t_email}}" />
+            <input type="hidden" name="name" value="{{name}}" />
+            <input
+              type="submit"
+              style="visibility: hidden"
+              value="Capture"
+              id="capture"
+              name="click"
+            />
+          </form>
+        </div>
       </div>
-   
-</body>
+    </div>
+    <script>
+      setTimeout(() => {
+        document.getElementById("capture").click();
+      }, 5000);
+    </script>
+  </body>
 </html>

@@ -232,3 +232,23 @@
       transform: translateX(0px);
     }
   } 
+
+
+
+
+
+@media screen and (max-width:750px) {
+  .formbg-outer{
+    flex-direction: column !important;
+  } 
+  .cam-div{
+    width: 100% !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: -5% !important;
+  }
+  .timer-div{
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
