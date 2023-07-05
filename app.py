@@ -112,8 +112,24 @@ def send_email(name,t_email):
     password = PASSWORD
 
     send_to_email = t_email
-    subject = 'You can find your face here'
-    message = 'your photo is here. Mr/Ms.'+name
+    subject = "Welcome"+name+", to St. Joseph's Group of Institutions"
+    message = "Dear Student,\nWe wanted to express our heartfelt thanks for your active participation and valuable contributions during the Engineering Excellence Program at St. Joseph's Group of Institutions. Your enthusiasm and dedication made a lasting impact on our engineering community.\n"
+
+    message = message+ "\nAttached is a photograph capturing the essence of the program, where you are part of our proud legacy. Your involvement showcased exceptional talent and an innovative spirit.\n"
+
+    message = message+"\nThank you for making the program a resounding success. Your story, passion, and impact will inspire future generations of engineers.\n"
+    message = message+"\nKeep pursuing your dreams and leaving a mark wherever you go. We are confident you will continue to achieve greatness.\n"
+    message = message+"\nThank you for being an integral part of the Engineering Excellence Program. We wish you continued success in your future endeavors.\n"
+    message = message+"\nWarm regards,\n"
+    message = message+"St. Joseph's Group of Institutions.\n"
+
+    message = message+"\nWebsite:https://stjosephs.ac.in/index.html\n"
+    message = message+ "https://www.stjosephstechnology.ac.in/web/index.html\n"
+    message = message+"Facebook: https://www.facebook.com/St.josephsgroupofinstitutionsomrchennai\n"
+    message = message+"LinkedIn: https://www.linkedin.com/company/st-joseph-s-group-of-institutions-omr-chennai/\n"
+    message = message+"Instagram: https://www.instagram.com/st.josephsgroupofinstitutions/\n"
+    message = message+"Twitter: https://mobile.twitter.com/StJosephsGroup\n"
+
     file_location = 'shots/me.jpg'
 
     msg = MIMEMultipart()
