@@ -36,7 +36,6 @@ camera = cv2.VideoCapture(0)
 
 @app.route('/')
 def index():
-    print(EMAIL + PASSWORD)
     return render_template('info.html')
 
 def gen_frames():  # generate frame by frame from camera
@@ -147,8 +146,7 @@ def send_email(name,t_email):
     
     
     
-    server = smtplib.SMTP('smtp.gmail.com', 465)
-    server.ehlo()
+    server = smtplib.SMTP('smtp.gmail.com', 587)
     server.starttls()
     server.login(email, password)
     text = msg.as_string()
@@ -166,7 +164,7 @@ def delete_uploaded_file(filepath):
     return False
 
 if __name__ == '__main__':
-    app.run("0.0.0.0",5000)
+    app.run()
     
  
 
